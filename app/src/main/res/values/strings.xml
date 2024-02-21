@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <item type="id" name ="ImageButton_ID"/>
+</resources>
