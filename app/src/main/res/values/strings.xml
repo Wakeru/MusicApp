@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">MusicApp</string>
+    <string name="MixMaker">MixMaker</string>
     <item type="id" name ="ImageButton_ID"/>
 </resources>

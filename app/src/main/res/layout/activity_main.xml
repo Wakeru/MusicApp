@@ -1,56 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="back">
+    tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/add"
-        android:layout_width="91dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="92dp"
-        android:scaleType="centerInside"
-        app:layout_constraintStart_toStartOf="parent"
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/plus" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteX="0dp">
 
-    <ImageButton
-        android:id="@+id/search"
-        android:layout_width="61dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="44dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/search" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Search..."
-        app:layout_constraintEnd_toStartOf="@+id/search"
-        app:layout_constraintHorizontal_bias="1.0"
+    <!-- Logo Image -->
+        <ImageView
+            android:id="@+id/mmlogo"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:padding="8dp"
+            android:src="@drawable/mmlogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title of the App -->
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingStart="8dp"
+            android:text="@string/MixMaker"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/mmlogo"
+            app:layout_constraintTop_toTopOf="@+id/mmlogo" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Song 1 -->
+    <ImageView
+        android:id="@+id/taylor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="104dp"
+        android:src="@drawable/taylor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="91dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Create new Folder"
-        android:textAlignment="center"
-        android:textSize="10sp"
+        android:id="@+id/song1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Lover"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/taylor"
+        app:layout_constraintTop_toTopOf="@id/taylor" />
+
+    <Button
+        android:id="@+id/addToPlaylist1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:onClick="addToPlaylist"
+        android:text="Add to Playlist"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#CD2626"
+        app:layout_constraintStart_toEndOf="@+id/taylor"
+        app:layout_constraintTop_toBottomOf="@id/song1Name"
+        app:rippleColor="#80FFFFFF"
+        app:strokeColor="#CDDC39" />
+
+    <!-- Song 2 -->
+    <ImageView
+        android:id="@+id/edsheeran"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/edsheeran"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
+        app:layout_constraintTop_toBottomOf="@id/taylor" />
+
+    <TextView
+        android:id="@+id/song2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Perfect"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/edsheeran"
+        app:layout_constraintTop_toTopOf="@id/edsheeran" />
+
+    <Button
+        android:id="@+id/addToPlaylist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:onClick="addToPlaylist"
+        android:text="Add to Playlist"
+        app:layout_constraintStart_toEndOf="@+id/edsheeran"
+        app:layout_constraintTop_toBottomOf="@id/song2Name" />
+
+    <!-- Song 3 -->
+    <ImageView
+        android:id="@+id/harrystyles"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/harrystyles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edsheeran" />
+
+    <TextView
+        android:id="@+id/song3Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Watermelon Sugar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/harrystyles"
+        app:layout_constraintTop_toTopOf="@id/harrystyles" />
+
+    <Button
+        android:id="@+id/addToPlaylist3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:onClick="addToPlaylist"
+        android:text="Add to Playlist"
+        app:layout_constraintStart_toStartOf="@id/song3Name"
+        app:layout_constraintTop_toBottomOf="@id/song3Name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
