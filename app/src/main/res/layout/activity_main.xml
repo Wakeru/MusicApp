@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/beige_back3"
     tools:context=".MainActivity">
 
     <!-- Toolbar -->
+
+    <!-- Song 1 -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/rust"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="84dp">
 
 
-    <!-- Logo Image -->
+        <!-- Logo Image -->
         <ImageView
             android:id="@+id/mmlogo"
             android:layout_width="80dp"
             android:layout_height="75dp"
+            android:layout_marginLeft="85dp"
             android:padding="8dp"
-            android:src="@drawable/mmlogo"
+            android:scaleType="fitXY"
+            android:src="@drawable/new_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +49,6 @@
             app:layout_constraintTop_toTopOf="@+id/mmlogo" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Song 1 -->
     <ImageView
         android:id="@+id/taylor"
         android:layout_width="150dp"
@@ -53,6 +56,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="104dp"
         android:src="@drawable/taylor"
+        android:padding="5dp"
+        android:background="@color/cool_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="@color/rust"
         android:onClick="addToPlaylist"
         android:text="Add to Playlist"
         android:textColorHighlight="#2196F3"
@@ -90,6 +96,9 @@
         android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="72dp"
+        android:background="@color/cool_blue"
+        android:padding="5dp"
+        android:scaleType="fitXY"
         android:src="@drawable/edsheeran"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/taylor" />
@@ -112,6 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="@color/rust"
         android:onClick="addToPlaylist"
         android:text="Add to Playlist"
         app:layout_constraintStart_toEndOf="@+id/edsheeran"
@@ -124,6 +134,8 @@
         android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="72dp"
+        android:padding="5dp"
+        android:background="@color/cool_blue"
         android:src="@drawable/harrystyles"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edsheeran" />
@@ -146,6 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@color/rust"
         android:onClick="addToPlaylist"
         android:text="Add to Playlist"
         app:layout_constraintStart_toStartOf="@id/song3Name"
