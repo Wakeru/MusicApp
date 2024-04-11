@@ -77,9 +77,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="294dp"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="144dp"
         android:text="@string/login_text"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

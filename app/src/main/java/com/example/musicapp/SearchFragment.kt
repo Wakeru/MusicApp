@@ -27,24 +27,24 @@ class SearchFragment : Fragment(){
         val searchView = view.findViewById<SearchView>(R.id.searchView)
         val lv_listView = view.findViewById<ListView>(R.id.listView)
 
-        val searchButton = view.findViewById<Button>(R.id.search)
-        searchButton.setOnClickListener {
+        val libraryButton = view.findViewById<Button>(R.id.libraryButton)
+        libraryButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_searchFragment_to_libraryFragment)
         }
 
-        /*
+
         adapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1, resources.getStringArray(R.array.song_albums))
         lv_listView.adapter = adapter
         lv_listView.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, position, id ->
             Toast.makeText(requireContext(), parent?.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show()
         }
 
-        searchView.queryHint = "Search your album!"
+        searchView.queryHint = "Search albums!"
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 // this handles search query submission
-                return false
+                return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
@@ -53,7 +53,7 @@ class SearchFragment : Fragment(){
                 return true
             }
         })
-        */
+
 
         return view
     }

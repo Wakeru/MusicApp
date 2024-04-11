@@ -27,7 +27,7 @@ class LibraryFragment : Fragment(){
 
         //val mmlogo: ImageView = view.findViewById(R.id.mmlogo)
 
-
+/* NOT USED FOR NOW
         // Add to Playlist Button for Song 1
         val addToPlaylist1 = view.findViewById<Button>(R.id.addToPlaylist1)
         addToPlaylist1.setOnClickListener{
@@ -45,7 +45,7 @@ class LibraryFragment : Fragment(){
         addToPlaylist3.setOnClickListener{
             Toast.makeText(requireContext(), "Watermelon Sugar added to your playlist", Toast.LENGTH_SHORT).show()
         }
-
+*/
 
 
         return  view

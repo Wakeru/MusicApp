@@ -12,7 +12,7 @@
     <string name="login_failed">"Login failed"</string>
 
     <!-- Strings related to other stuff-->
-    <string name="login_text"> "Welcome to MixMaker, where your music journey begins! Discover, listen, and enjoy your favorite tunes with ease.</string>
+    <string name="login_text"> "Welcome back to MixMaker, where your music journey is just beginning! Discover, listen, and enjoy your favorite tunes with ease.</string>
 
     <!--For the search bar, the arrrrrrrrrrrrrray-->
     <string-array name="song_albums">
