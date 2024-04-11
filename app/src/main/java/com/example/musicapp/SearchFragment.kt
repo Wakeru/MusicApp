@@ -38,14 +38,17 @@ class SearchFragment : Fragment(){
             Toast.makeText(requireContext(), parent?.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show()
         }
 
+        searchView.queryHint = "Search your album!"
+
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                // Handle search query submission
-                return true
+                // this handles search query submission
+                return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Handle text changes in the search bar
+                // this handles text changes in the search bar
+                adapter.filter.filter(newText)
                 return true
             }
         })
