@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.findNavController
 
 
 class LibraryFragment : Fragment(){
@@ -19,6 +20,11 @@ class LibraryFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_library,container,false)
+        val backButton = view.findViewById<Button>(R.id.backButton)
+        backButton.setOnClickListener{
+            view.findNavController()
+                .navigate(R.id.action_libraryFragment_to_searchFragment)
+        }
 
         // Setup Toolbar
         //val toolbar: Toolbar = view.findViewById(R.id.toolbar)
