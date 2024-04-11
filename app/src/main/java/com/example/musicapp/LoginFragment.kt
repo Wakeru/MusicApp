@@ -21,11 +21,11 @@ class LoginFragment : Fragment(){
             view.findNavController()
                 .navigate(R.id.action_loginFragment_to_searchFragment)
         }
-        val signupButton = view.findViewById<Button>(R.id.signupB)
+       /* val signupButton = view.findViewById<Button>(R.id.signupB)
         signupButton.setOnClickListener {
             view.findNavController()
                 .navigate(R.id.action_loginFragment_to_searchFragment)     //possibly make this do a different action to a signup page instead but this is placeholder for now
-        }
+        }*/
 
         return view
     }
