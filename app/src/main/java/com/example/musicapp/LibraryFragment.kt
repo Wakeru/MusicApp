@@ -21,11 +21,11 @@ class LibraryFragment : Fragment(){
         val view = inflater.inflate(R.layout.fragment_library,container,false)
 
         // Setup Toolbar
-        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
+        //val toolbar: Toolbar = view.findViewById(R.id.toolbar)
         //setSupportActionBar(toolbar)
         activity?.title = getString(R.string.MixMaker)
 
-        val mmlogo: ImageView = view.findViewById(R.id.mmlogo)
+        //val mmlogo: ImageView = view.findViewById(R.id.mmlogo)
 
 
         // Add to Playlist Button for Song 1
