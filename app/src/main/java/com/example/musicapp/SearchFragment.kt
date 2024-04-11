@@ -27,11 +27,12 @@ class SearchFragment : Fragment(){
         val searchView = view.findViewById<SearchView>(R.id.searchView)
         val lv_listView = view.findViewById<ListView>(R.id.listView)
 
-        //val searchButton = view.findViewById<Button>(R.id.search)
-        //searchButton.setOnClickListener {
-        //    view.findNavController().navigate(R.id.action_searchFragment_to_libraryFragment)
-        //}
+        val searchButton = view.findViewById<Button>(R.id.search)
+        searchButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_searchFragment_to_libraryFragment)
+        }
 
+        /*
         adapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1, resources.getStringArray(R.array.song_albums))
         lv_listView.adapter = adapter
         lv_listView.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, position, id ->
@@ -52,6 +53,7 @@ class SearchFragment : Fragment(){
                 return true
             }
         })
+        */
 
         return view
     }
